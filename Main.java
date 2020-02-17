@@ -6,6 +6,7 @@ public class Main {
     static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args)  {
         boolean c=true;
+
         while (c){
             String command=scanner.nextLine();
             switch (command){
@@ -23,10 +24,12 @@ public class Main {
 
     public static void beginTheGame() {
         System.out.println("Welcome to game. Enter the name of city, please: ");
-        for (int i=0; i<3; i++){
+        Constructors con = new Constructors();
+        while(con.getResult()!="I am done"){
             String input = scanner.nextLine();
-            Constructors con = new Constructors(input);
-            con.setInput(input);}
+            con.setInput(input);
+            //con.usercitiesinfo();
+        }
 
 
 
